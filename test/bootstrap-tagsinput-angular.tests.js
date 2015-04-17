@@ -2,19 +2,19 @@ describe('bootstrap-tagsinput', function() {
 
   // Load the myApp module, which contains the directive
   beforeEach(module('bootstrap-tagsinput'));
-  
+
   describe("with strings as items" , function() {
     describe("compile with 2 tags in model" , function() {
       var $scope,
           $element;
-  
+
       beforeEach(inject(function($compile, $rootScope){
         $scope = $rootScope;
         $scope.tags = ['Amsterdam', 'New York'];
         $element = $compile(angular.element('<bootstrap-tagsinput ng-model="tags" />'))($scope);
         $scope.$digest();
       }));
-      
+
       it('should hide the element', function() {
         expect($element.is(":visible")).toBe(false);
       });
@@ -29,14 +29,14 @@ describe('bootstrap-tagsinput', function() {
     describe("compile with 2 tags in model" , function() {
       var $scope,
           $element;
-  
+
       beforeEach(inject(function($compile, $rootScope){
         $scope = $rootScope;
         $scope.tags = [{ value: 1, text: 'Amsterdam'}, { value: 2, text: 'New York'} ];
         $element = $compile(angular.element('<bootstrap-tagsinput ng-model="tags" itemvalue="value" itemtext="text"/>'))($scope);
         $scope.$digest();
       }));
-      
+
       it('should hide the element', function() {
         expect($element.is(":visible")).toBe(false);
       });

@@ -114,11 +114,11 @@ describe("bootstrap-tagsinput", function() {
         });
       });
     });
-    
+
     describe("#142: Initialization of Null Values for Multi Select field", function() {
       testTagsInput('<select multiple data-role="tagsinput"></select>', function() {
         it("Initializing an empty select shouldn't throw an error.", function() {
-            $("select[multiple][data-role=tagsinput]").tagsinput();
+          $("select[multiple][data-role=tagsinput]").tagsinput();
         });
       });
     });
@@ -126,13 +126,13 @@ describe("bootstrap-tagsinput", function() {
     describe("#128: Custom classes for tags don't work if entered as strings", function() {
       testTagsInput('<input type="text" value="1" />', { tagClass: 'big' }, function() {
         it("should have a tag with class 'big' when using tagClass option as string", function() {
-            expect($(".big", this.$tagsinput).length).toBe(1);
+          expect($(".big", this.$tagsinput).length).toBe(1);
         });
       });
 
       testTagsInput('<input type="text" value="1" />', { tagClass: function() { return 'big'; } }, function() {
         it("should have a tag with class 'big' when using tagClass option as function", function() {
-            expect($(".big", this.$tagsinput).length).toBe(1);
+          expect($(".big", this.$tagsinput).length).toBe(1);
         });
       });
     });
@@ -140,8 +140,8 @@ describe("bootstrap-tagsinput", function() {
     describe("#107: Fixed bug when removing items", function() {
       testTagsInput('<input type="text" value="yes,no" />', function() {
         it("should not remove items when remove a non-existing item", function() {
-            this.$element.tagsinput('remove', 'maybe');
-            expect(this.$element.tagsinput('items').length).toBe(2);
+          this.$element.tagsinput('remove', 'maybe');
+          expect(this.$element.tagsinput('items').length).toBe(2);
         });
       });
     });

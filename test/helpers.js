@@ -8,7 +8,7 @@ function testTagsInput(elementHtml, options, tests) {
   }
 
   describe(elementHtml + ' (options: ' + JSON.stringify(options, function(name, value) { return (typeof value === "function") ? value.toString() : value; }) + ')', function() {
-   beforeEach(function() {
+    beforeEach(function() {
       this.$sandbox = $('<div />').appendTo($('body'));
       this.$element = $(elementHtml).appendTo(this.$sandbox);
       this.$element.tagsinput(options);
