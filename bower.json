@@ -8,7 +8,7 @@
   ],
   "description": "jQuery plugin providing a Twitter Bootstrap user interface for managing tags.",
   "main": [
-    "dist/bootstrap-tagsinput.js",
+    "src/bootstrap-tagsinput.js",
     "dist/bootstrap-tagsinput.css"
   ],
   "keywords": [
